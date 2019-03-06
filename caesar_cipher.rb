@@ -13,17 +13,8 @@ print caesar_cipher("Helloz", 2)
 
 
 =begin
-def get_unicode(char)
-  (0..109_976).each do |pos|
-    chr = ''
-    chr << pos
-    return pos.to_s(16) if chr == char
-  end
-end
 
-def get_character(hexnum)
-  char = ''
-  char << hexnum.to_i(16)
-end
+puts 'a'.ord
+puts 97.chr
 
 =end
