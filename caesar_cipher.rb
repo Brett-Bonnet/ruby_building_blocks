@@ -17,4 +17,25 @@ print caesar_cipher("Helloz", 2)
 puts 'a'.ord
 puts 97.chr
 
+a = 'Y'.ord
+
+shift = a + 2
+
+
+def fix(num)
+
+  if num > 122 then
+    (num -= 26).chr
+  else
+    if num > 90 && num < 97 then
+      (num -= 26).chr
+    else 
+      puts 'under'
+    end  
+  end
+  
+end  
+    
+fix(shift)
+
 =end
