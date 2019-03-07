@@ -1,41 +1,26 @@
 
-def caesar_cipher(str, num = 1)
-  text = str.downcase.split('')
-  alphabet = ('a'..'z').to_a
-  
-
-   indexes = text.map {|n| alphabet.index(n)}
-   indexes.map {|a| alphabet[a + num]}
-
+def caesar_cipher(string, shift_num=1)
+hex_array = string.split('').map {|letter| letter = letter.ord }  
+new_array = hex_array.map {|num| num > 64 ? shift_hex(num, shift_num) : num.chr }
+puts new_array.join('')
 end
 
-print caesar_cipher("Helloz", 2)
-
-
-=begin
-
-puts 'a'.ord
-puts 97.chr
-
-a = 'Y'.ord
-
-shift = a + 2
-
-
-def fix(num)
-
-  if num > 122 then
-    (num -= 26).chr
+def shift_hex(hexnum, shift)
+shifted = hexnum + shift
+  if shifted > 122
+    (shifted -= 26).chr
   else
-    if num > 90 && num < 97 then
-      (num -= 26).chr
+    if shifted > 90 && shifted < 97
+      (shifted -= 26).chr
     else 
-      puts 'under'
+      shifted.chr
     end  
   end
-  
-end  
-    
-fix(shift)
+end
 
-=end
+print caesar_cipher("Hello World", 4)
+
+
+
+
+
