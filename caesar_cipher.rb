@@ -1,8 +1,10 @@
 
 def caesar_cipher(string, shift_num=1)
 hex_array = string.split('').map {|letter| letter = letter.ord }  
-new_array = hex_array.map {|num| num > 64 ? shift_hex(num, shift_num) : num.chr }
-puts new_array.join('')
+char_array = hex_array.map {|num| num > 64 ? shift_hex(num, shift_num) : num.chr }
+cipherized = char_array.join('')
+
+puts cipherized
 end
 
 def shift_hex(hexnum, shift)
@@ -17,9 +19,6 @@ shifted = hexnum + shift
     end  
   end
 end
-
-print caesar_cipher("Hello World", 4)
-
 
 
 
