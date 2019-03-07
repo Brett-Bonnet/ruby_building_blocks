@@ -1,6 +1,6 @@
-#Odin Project: Ruby_Building_Blocks
+# Odin Project: Ruby_Building_Blocks
 
-#Caesar Cipher
+## Caesar Cipher
 
 From Wikipedia:
 
