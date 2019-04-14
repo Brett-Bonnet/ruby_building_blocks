@@ -19,7 +19,6 @@ def substrings(to_search, reference)
 
 end
 
-substrings("Howdy partner, sit down! How's it going?", dictionary)
 
 
 
